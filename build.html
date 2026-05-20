@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Bezalel — Parts and Instructions</title>
+  <meta name="description" content="Download CAD files, BOM, and firmware to build your own Bezalel tactile display.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <script src="assets/js/nav.js"></script>
+
+  <main>
+    <section class="page-card" id="parts">
+      <div class="page-card-inner">
+        <h2 class="hook-h2 hook-green">Build a dashboard for your AI agents.</h2>
+        <p>
+          Everything you need to customize and download your own <strong>Project Packs</strong> — 
+          from 3D-printable CAD files to electronics BOMs.
+        </p>
+        
+        <div class="hero-cta" style="margin: var(--spacer) 0;">
+          <button class="btn btn-ghost" onclick="selectPreset('3x3-full')">3×3 Dashboard Preset</button>
+          <button class="btn btn-ghost" onclick="selectPreset('ai-starter')">AI Agent Starter Preset</button>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card" data-part-id="frame-3x3">
+            <h3>Main Frame (3×3)</h3>
+            <p>STL &middot; 1.2MB</p>
+            <button class="btn btn-ghost btn-add" onclick="toggleCartItem('frame-3x3')" style="margin-top: 1rem; width: 100%;">Add to pack</button>
+          </div>
+          <div class="feature-card" data-part-id="pin-unit">
+            <h3>Single Pin Unit</h3>
+            <p>STL &middot; 0.4MB</p>
+            <button class="btn btn-ghost btn-add" onclick="toggleCartItem('pin-unit')" style="margin-top: 1rem; width: 100%;">Add to pack</button>
+          </div>
+          <div class="feature-card" data-part-id="bom-3x3">
+            <h3>3×3 Bill of Materials</h3>
+            <p>CSV &middot; 12KB</p>
+            <button class="btn btn-ghost btn-add" onclick="toggleCartItem('bom-3x3')" style="margin-top: 1rem; width: 100%;">Add to pack</button>
+          </div>
+          <div class="feature-card" data-part-id="firmware-grbl">
+            <h3>GRBL 1.1h Firmware</h3>
+            <p>HEX &middot; 64KB</p>
+            <button class="btn btn-ghost btn-add" onclick="toggleCartItem('firmware-grbl')" style="margin-top: 1rem; width: 100%;">Add to pack</button>
+          </div>
+          <div class="feature-card" data-part-id="ai-dashboard-py">
+            <h3>AI Agent Connector</h3>
+            <p>PY &middot; 8KB</p>
+            <button class="btn btn-ghost btn-add" onclick="toggleCartItem('ai-dashboard-py')" style="margin-top: 1rem; width: 100%;">Add to pack</button>
+          </div>
+        </div>
+
+        <div style="margin-top: calc(var(--spacer) * 2); text-align: center;">
+          <button class="btn btn-start" id="download-bundle-btn" style="padding: 1.6rem 3.2rem; font-size: 1.8rem;">
+            Download Pack (0 items)
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
