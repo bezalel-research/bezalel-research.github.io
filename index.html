@@ -1,195 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bezalel — Open-source, 3D-printable, low-cost tactile display</title>
-  <meta name="description" content="Bezalel is an open-source technology for building tactile interfaces using 3D printing and a minimal number of actuators.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <div id="navbar-placeholder"></div>
-  <script src="assets/js/nav.js"></script>
-
-  <main>
-    <section class="hero">
-      <div class="hero-grid" style="max-width: var(--container); margin: 0 auto;">
-        <div class="hero-content" style="margin: 0;">
-          <h1>Tangible dashboards for <span class="text-highlight">AI</span> agents</h1>
-          <p class="hero-subtitle">
-            Open-source <strong>tangible dashboards for AI agents</strong>. Build, customize and share physical interfaces that make AI understandable, controllable and accessible.
-          </p>
-          <div class="hero-cta">
-            <button class="btn btn-start" id="start-exploring-btn" type="button">Start exploring <svg style="margin-left: 0.5rem; vertical-align: middle;" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
-            <a class="btn btn-ghost btn-play" href="https://www.youtube.com/watch?v=fyhcJz_-Ox4">Watch how it works <svg class="play-icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
-          </div>
-
-          <div class="hero-badges">
-            <span class="badge"><svg class="icon-green" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> 3D-printable</span>
-            <span class="badge"><svg class="icon-green" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Open source</span>
-            <span class="badge"><svg class="icon-green" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Maker community</span>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <img src="assets/tic-tac-toe.png" alt="Tic Tac Toe Tangible Interface" class="device-svg" />
-        </div>
-      </div>
-    </section>
-
-    <div class="modal-backdrop" id="explore-modal" role="presentation" aria-hidden="true">
-      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="explore-modal-title">
-        <header class="modal-header">
-          <div>
-            <h2 id="explore-modal-title">Start exploring</h2>
-            <p>Pick a Play Pack to try now, or jump to Build Packs to create your own Project Pack.</p>
-          </div>
-          <button class="modal-close" id="close-explore-modal" type="button" aria-label="Close popup">&times;</button>
-        </header>
-
-        <div class="project-grid">
-          <a class="project-card" href="play.html">
-            <div class="project-thumb thumb-ai" aria-hidden="true" style="background: linear-gradient(135deg, var(--color-accent), var(--color-hook-red));">AI</div>
-            <div class="project-copy">
-              <h3>AI Agent Dashboard Pack</h3>
-              <p>Physicalize your digital models. Download the starter pack.</p>
-            </div>
-          </a>
-
-          <a class="project-card" href="https://pedrosacramento.github.io/tictactoe/" target="_blank" rel="noopener noreferrer">
-            <div class="project-thumb thumb-tictactoe" aria-hidden="true">XO</div>
-            <div class="project-copy">
-              <h3>Tic-Tac-Toe Pack</h3>
-              <p>Try the live simulator or download the physical play pack.</p>
-            </div>
-          </a>
-
-          <a class="project-card" href="https://github.com/pedrosacramento/bezalel/archive/refs/heads/master.zip">
-            <div class="project-thumb thumb-wave" aria-hidden="true">~</div>
-            <div class="project-copy">
-              <h3>Battleship Pack</h3>
-              <p>A tactical game pack for demonstrating complex patterns.</p>
-            </div>
-          </a>
-
-          <a class="project-card" href="https://github.com/pedrosacramento/bezalel/archive/refs/heads/master.zip">
-            <div class="project-thumb thumb-shapes" aria-hidden="true">3x3</div>
-            <div class="project-copy">
-              <h3>Shapes Starter Pack</h3>
-              <p>Download a quick-start bundle for shape and grid experiments.</p>
-            </div>
-          </a>
-        </div>
-
-        <footer class="modal-footer">
-          <p>Want a custom build instead of a sample?</p>
-          <a class="btn btn-ghost" href="build.html" id="customize-pack-link">Customize your pack</a>
-        </footer>
-      </section>
-    </div>
-
-    <section class="page-card" id="features">
-      <div class="page-card-inner">
-        <h2 class="hook-h2 hook-indigo">Free, Open, and Maker-friendly.</h2>
-        <p>Designed from the ground up to support our three core communities.</p>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="card-icon icon-purple">
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-            </div>
-            <h3>Makers</h3>
-            <p>Print, build, and modify — every part is FDM-friendly and low-cost by design.</p>
-          </article>
-          <article class="feature-card">
-            <div class="card-icon icon-mint">
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            </div>
-            <h3>Hackers</h3>
-            <p>Fully open-source mechanics and GRBL-controlled firmware, ready to fork and extend.</p>
-          </article>
-          <article class="feature-card">
-            <div class="card-icon icon-amber">
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <h3>Parents & Educators</h3>
-            <p>Offer children a screen-free AI experience — playing tactile games like Tic-Tac-Toe against digital agents.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-card" id="how-it-works">
-      <div class="page-card-inner">
-        <h2>A novel actuation principle.</h2>
-        <p>
-          Bezalel introduces a novel actuation principle where a small set of actuators controls
-          an entire grid of pins. Two orthogonal groups of actuators push or pull an array of
-          rotary elements, efficiently converting their motion into independent pin actuation.
-        </p>
-        
-        <div class="feature-grid" style="margin-top: var(--spacer-lg); align-items: start;">
-          <div>
-            <h3>Scalability and Efficiency</h3>
-            <p>
-              Traditional tactile displays are expensive because each pin usually needs its own
-              actuator — making cost grow quadratically with resolution.
-            </p>
-            <p style="margin-top: 1rem;">
-              By using a novel actuation principle, <strong>Bezalel scales linearly</strong>. 
-              This makes high-resolution tactile displays a reality for independent makers 
-              and small labs.
-            </p>
-            <div class="hero-cta" style="margin-top: 1.5rem;">
-              <a class="btn btn-ghost" href="how-it-works.html">Technical Deep Dive →</a>
-              <a class="btn btn-ghost" href="play.html">Try the Simulators →</a>
-            </div>
-          </div>
-          <div>
-            <h3>Applications</h3>
-            <p>
-              The Bezalel platform enables a new class of tactile interfaces, from 
-              <strong>tangible dashboards for AI agents</strong> to inclusive educational games.
-            </p>
-            <ul style="margin-top: 1rem;">
-              <li><strong>3×3 AI Interaction Matrix:</strong> A ready-to-use, 3D-printable dashboard for physicalizing digital models.</li>
-              <li><strong>Inclusive Play Packs:</strong> Tactile simulators for games like Tic-Tac-Toe and beyond.</li>
-              <li><strong>Future Horizons:</strong> Scaling to 6×6 high-resolution surfaces for spatial AI visualization.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-card" id="evolution">
-      <div class="page-card-inner">
-        <h2>The Journey.</h2>
-        
-        <div class="evolution-timeline">
-          <div class="evolution-step">
-            <h3>2019: The Research</h3>
-            <p>Published at <strong>SIGGRAPH</strong> as a breakthrough in linear-scaling tactile displays.</p>
-          </div>
-          <div class="evolution-step">
-            <h3>2022-2024: The Hardware</h3>
-            <p>Refined into a 3D-printable 3x3 dashboard; winner at <strong>Hackster.io Build2gether</strong>.</p>
-          </div>
-          <div class="evolution-step">
-            <h3>2025: The Platform</h3>
-            <p>Positioned as a ready-to-use platform for <strong>Tangible Dashboards for AI Agents</strong> and <strong>Play Packs</strong>.</p>
-          </div>
-        </div>
-
-        <p style="margin-top: 2rem;">
-          Explore our full journey and personal mission on the <a href="about.html">About</a> page.
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <script src="assets/js/footer.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bezalel — Open-source, 3D-printable, low-cost tactile display</title>
+    <meta
+      name="description"
+      content="Bezalel is an open-source technology for building tactile interfaces using 3D printing and a minimal number of actuators."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-BN3tepB5.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-sF3IfMTr.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
